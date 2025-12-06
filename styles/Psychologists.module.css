@@ -1,0 +1,365 @@
+/* Psychologists Page Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F0F4F8 0%, #E8EEF5 100%);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #5DB7D1 0%, #7DD3C0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+}
+
+.header p {
+  color: #6B7280;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Filter Section */
+.filterSection {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filterSection h3 {
+  margin-bottom: 1rem;
+  color: #1A202C;
+}
+
+.filterButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  animation: slideInUp 0.6s ease-out 0.1s both;
+}
+
+.filterBtn {
+  padding: 0.625rem 1.25rem;
+  border: 2px solid #E1E8ED;
+  background: white;
+  color: #6B7280;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.filterBtn:hover {
+  border-color: #5DB7D1;
+  color: #5DB7D1;
+}
+
+.filterBtn.active {
+  background: linear-gradient(135deg, #5DB7D1 0%, #7DD3C0 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(93, 183, 209, 0.3);
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.spinner {
+  color: #5DB7D1;
+  margin-bottom: 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingContainer p {
+  color: #6B7280;
+  font-size: 1.1rem;
+}
+
+/* Error Alert */
+.errorAlert {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #FEE2E2;
+  border-left: 4px solid #EF4444;
+  border-radius: 12px;
+  color: #DC2626;
+}
+
+.errorAlert svg {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.errorAlert h3 {
+  margin-bottom: 0.5rem;
+}
+
+.errorAlert p {
+  margin-bottom: 1rem;
+  color: #DC2626;
+}
+
+.retryBtn {
+  padding: 0.625rem 1.25rem;
+  background: #DC2626;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retryBtn:hover {
+  background: #991B1B;
+  transform: translateY(-2px);
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.emptyState p {
+  color: #6B7280;
+  font-size: 1.1rem;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+/* Psychologist Card */
+.psychologistCard {
+  background: white;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.psychologistCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(93, 183, 209, 0.15);
+}
+
+/* Avatar */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5DB7D1 0%, #7DD3C0 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(93, 183, 209, 0.3);
+}
+
+/* Info */
+.info h3 {
+  margin-bottom: 0.5rem;
+  color: #1A202C;
+}
+
+.specialty {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  background: linear-gradient(135deg, rgba(93, 183, 209, 0.1), rgba(125, 211, 192, 0.1));
+  color: #5DB7D1;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  color: #6B7280;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: #F8FAFB;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #5DB7D1;
+}
+
+/* CTA Button */
+.ctaBtn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #5DB7D1 0%, #7DD3C0 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(93, 183, 209, 0.3);
+  margin-top: auto;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(93, 183, 209, 0.4);
+}
+
+.ctaBtn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterButtons {
+    flex-direction: column;
+  }
+
+  .filterBtn {
+    width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.75rem;
+  }
+
+  .filterSection {
+    padding: 1.5rem;
+  }
+
+  .filterSection h3 {
+    font-size: 1rem;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 1.75rem;
+  }
+
+  .info h3 {
+    font-size: 1.25rem;
+  }
+}
