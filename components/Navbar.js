@@ -45,6 +45,12 @@ export default function Navbar() {
                 <Calendar size={18} />
                 <span>Mis citas</span>
               </Link>
+              {user?.role === 'ADMIN' && (
+                <Link href="/admin" className={styles.navLink}>
+                  <Users size={18} />
+                  <span>Panel Admin</span>
+                </Link>
+              )}
               <div className={styles.userInfo}>
                 <span className={styles.userName}>{user?.fullName}</span>
               </div>
